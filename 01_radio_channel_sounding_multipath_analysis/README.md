@@ -413,8 +413,7 @@ Future work should include:
 • comparison against standardized channel models such as 3GPP TR 38.901  
 • spatial smoothing for correlated multipath arrivals before MUSIC processing  
 
-# Engineering Relevance:
-
+# Skills Demonstrated:
 This project demonstrates the following RF/wireless engineering skills:
 
 • RF link-budget calculation  
