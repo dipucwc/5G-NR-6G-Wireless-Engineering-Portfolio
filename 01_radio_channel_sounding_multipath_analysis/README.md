@@ -2,19 +2,12 @@
 
 # Project Overview:
 
-This project presents a complete RF/wireless channel-modeling portfolio project focused on radio-channel sounding, multipath propagation analysis, link-budget calculation, delay-domain statistics, and angular-domain algorithm validation at 5.25 GHz.
-
+This project presents a complete RF/wireless channel-modeling portfolio project focused on radio-channel sounding, multipath propagation analysis, link-budget calculation, delay-domain statistics, and angular-domain algorithm validation at 5.25 GHz. This is a first-principles link-budget and simulation-based algorithm-validation project
 The project connects first-principles RF propagation analysis with simulation-based channel-processing algorithms. The first part focuses on deterministic received-power calculation, including EIRP, free-space path loss, antenna gains, cable losses, attenuator loss, ASU insertion loss, LNA gain, and ITU single-knife-edge diffraction loss. The second part focuses on wireless-channel characterization, including channel impulse response modeling, power delay profile extraction, mean excess delay, RMS delay spread, coherence bandwidth, angular spread, spatial covariance, Bartlett beamforming, and MUSIC algorithm validation.
 
 The purpose of this project is to demonstrate practical RF/wireless engineering capability, not only theoretical knowledge of propagation models. The repository includes the technical report, MATLAB/Python/C source files, generated result figures, and documentation explaining how the simulations were performed and interpreted.
 
 This project is relevant to **5G NR / 6G wireless-channel modeling**, OFDM frequency-selectivity analysis, MIMO channel interpretation, link-budget engineering, and beamforming-oriented propagation studies.
-
-# Important Scope Note:
-
-This is a **first-principles link-budget and simulation-based algorithm-validation project**.
-
-It does **not** claim to process raw measured channel impulse response data or calibrated measured complex ULA snapshots. The Bartlett and MUSIC results are used for controlled angular-domain algorithm validation using simulated ULA snapshots. They should not be interpreted as measured DoA results unless calibrated complex array measurement data is added in future work.
 
 # Topics Covered:
 
