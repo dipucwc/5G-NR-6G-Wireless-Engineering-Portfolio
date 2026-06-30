@@ -1,90 +1,90 @@
-# Radio Channel Sounding and Multipath Propagation Analysis
-
+# 01 - Radio Channel Sounding and Multipath Propagation Analysis
 
 # Project Overview:
 
-This project presents a complete RF/wireless channel-modeling and propagation-analysis portfolio project focused on **5.25 GHz radio-channel sounding, multipath propagation, link-budget analysis, delay-domain statistics, and angular-domain algorithm validation**.
-The first part focuses on first-principles RF link-budget analysis, including EIRP calculation, free-space path loss, antenna gains, cable losses, attenuator loss, ASU insertion loss, LNA gain, and explicit received-power reference-plane separation. The second part focuses on channel-processing algorithms, including channel impulse response modeling, power delay profile extraction, RMS delay-spread estimation, coherence-bandwidth calculation, and scenario-wise LoS, diffraction-rich NLoS, and reflection-rich NLoS interpretation.
-The third part focuses on angular-domain algorithm validation using a uniform linear array signal model, spatial covariance estimation, Bartlett beamforming, and MUSIC super-resolution processing on simulated ULA snapshots.
-The purpose of this project is to demonstrate practical RF/wireless system-engineering capability, not only theoretical familiarity with channel models. The repository includes the technical report, MATLAB/Python/C source files, generated figures, validation results, and documentation explaining how the simulations were performed and interpreted.
+This project presents a complete RF/wireless channel-modeling portfolio project focused on **radio-channel sounding, multipath propagation analysis, link-budget calculation, delay-domain statistics, and angular-domain algorithm validation** at **5.25 GHz**.
 
----
+The project connects first-principles RF propagation analysis with simulation-based channel-processing algorithms. The first part focuses on deterministic received-power calculation, including EIRP, free-space path loss, antenna gains, cable losses, attenuator loss, ASU insertion loss, LNA gain, and ITU single-knife-edge diffraction loss. The second part focuses on wireless-channel characterization, including channel impulse response modeling, power delay profile extraction, mean excess delay, RMS delay spread, coherence bandwidth, angular spread, spatial covariance, Bartlett beamforming, and MUSIC algorithm validation.
+
+The purpose of this project is to demonstrate practical RF/wireless engineering capability, not only theoretical knowledge of propagation models. The repository includes the technical report, MATLAB/Python/C source files, generated result figures, and documentation explaining how the simulations were performed and interpreted.
+
+This project is relevant to **5G NR / 6G wireless-channel modeling**, OFDM frequency-selectivity analysis, MIMO channel interpretation, link-budget engineering, and beamforming-oriented propagation studies.
+
+# Important Scope Note:
+
+This is a **first-principles link-budget and simulation-based algorithm-validation project**.
+
+It does **not** claim to process raw measured channel impulse response data or calibrated measured complex ULA snapshots. The Bartlett and MUSIC results are used for controlled angular-domain algorithm validation using simulated ULA snapshots. They should not be interpreted as measured DoA results unless calibrated complex array measurement data is added in future work.
+
 # Topics Covered:
 
-•	5.25 GHz radio-channel sounding analysis
-•	Multipath propagation modeling
-•	First-principles RF link-budget calculation
-•	EIRP, free-space path loss, and Friis relation
-•	Antenna-input and post-LNA received-power reference planes
-•	ITU single-knife-edge diffraction-loss modeling
-•	Channel impulse response modeling
-•	Power delay profile extraction
-•	Mean excess delay calculation
-•	RMS delay-spread estimation
-•	Coherence-bandwidth estimation
-•	LoS, diffraction-rich NLoS, and reflection-rich NLoS propagation profiles
-•	Uniform linear array signal model
-•	Spatial covariance estimation
-•	Bartlett beamformer validation
-•	MUSIC super-resolution algorithm validation
-•	Delay-domain and angular-domain channel-statistics interpretation
-•	MATLAB, Python, and C reference implementations
-•	Algorithm complexity analysis
-•	Engineering result traceability
-
----
+• 5.25 GHz radio-channel sounding analysis  
+• First-principles RF link-budget calculation  
+• Effective isotropic radiated power calculation  
+• Free-space path loss analysis  
+• ITU single-knife-edge diffraction-loss modeling  
+• Antenna-input and post-LNA received-power reference planes  
+• Channel impulse response modeling  
+• Power delay profile estimation  
+• Mean excess delay calculation  
+• RMS delay-spread estimation  
+• Coherence-bandwidth approximation  
+• LoS, diffraction-rich NLoS, and reflection-rich NLoS propagation profiles  
+• Uniform linear array signal model  
+• Spatial covariance estimation  
+• MDL/AIC source-count interpretation  
+• Bartlett beamformer validation  
+• MUSIC super-resolution algorithm validation  
+• Scenario-wise angular-spread interpretation  
+• MATLAB, Python, and C reference implementations  
+• Algorithm complexity analysis  
+• Engineering result traceability  
 
 # Project Workflow:
 
-The project follows a complete wireless-channel analysis and algorithm-validation flow:
+The project follows a complete RF/wireless channel-analysis flow:
 
-```text
-5.25 GHz Channel Scenario Definition
-        ↓
-RF Link-Budget Parameter Setup
-        ↓
-EIRP / FSPL / Diffraction-Loss Calculation
-        ↓
-Received-Power Reference-Plane Separation
-        ↓
-Channel Impulse Response Modeling
-        ↓
-Power Delay Profile Extraction
-        ↓
-Mean Excess Delay and RMS Delay Spread
-        ↓
-Coherence-Bandwidth Estimation
-        ↓
-LoS / Diffraction-Rich / Reflection-Rich Scenario Comparison
-        ↓
-ULA Snapshot Generation for Algorithm Validation
-        ↓
-Spatial Covariance Estimation
-        ↓
-Bartlett Beamformer Validation
-        ↓
-MUSIC Super-Resolution Validation
-        ↓
-Algorithm Complexity Summary
-        ↓
-Final Technical Report and Result Interpretation
-```
-
----
+Known Wideband Channel-Sounding Model  
+        ↓  
+RF Link-Budget Reference-Plane Definition  
+        ↓  
+EIRP, FSPL, Antenna Gain, Cable Loss, ASU Loss, and LNA Gain Calculation  
+        ↓  
+ITU Knife-Edge Diffraction-Loss Modeling  
+        ↓  
+Channel Impulse Response Scenario Construction  
+        ↓  
+Power Delay Profile Extraction  
+        ↓  
+Mean Excess Delay and RMS Delay Spread Calculation  
+        ↓  
+Coherence-Bandwidth Estimation  
+        ↓  
+ULA Snapshot Generation for Angular Validation  
+        ↓  
+Spatial Covariance Estimation  
+        ↓  
+Bartlett Beamformer Angular Spectrum  
+        ↓  
+MUSIC Pseudo-Spectrum Validation  
+        ↓  
+Scenario-Wise Delay and Angular Statistics  
+        ↓  
+MATLAB / Python / C Cross-Validation  
+        ↓  
+Final Technical Report and Result Interpretation  
 
 ## Tools Used:
 
 | Tool | Purpose |
 |---|---|
-| MATLAB | Main simulation, channel-analysis pipeline, figure generation, PDP analysis, delay statistics, Bartlett/MUSIC validation |
-| Python | Reference numerical validation and deterministic cross-checking of selected processing blocks |
-| C | Lightweight implementation for received-power and delay-statistics checks |
-| RF theory / hand calculation | EIRP, FSPL, Friis relation, diffraction loss, delay-spread equations, coherence-bandwidth approximation |
-| Channel-sounding theory | CIR, PDP, delay-domain statistics, multipath interpretation |
-| Array signal processing | ULA steering vector, covariance matrix, Bartlett spectrum, MUSIC pseudo-spectrum |
+| MATLAB | Main simulation pipeline, link-budget calculation, PDP generation, delay-statistics extraction, plotting, Bartlett/MUSIC validation |
+| Python | Reference implementation for deterministic numerical cross-checking |
+| C | Lightweight implementation for received-power and delay-statistics validation |
+| RF propagation theory | EIRP, FSPL, Friis relation, diffraction loss, link-budget reference-plane calculation |
+| Wireless channel theory | CIR, PDP, RMS delay spread, coherence bandwidth, angular spread, MIMO channel-model interpretation |
+| Array signal processing | ULA steering vectors, spatial covariance, Bartlett beamforming, MUSIC subspace processing |
 | Technical documentation | Report writing, result interpretation, traceability, and portfolio presentation |
-
----
 
 # Repository Structure:
 
@@ -96,13 +96,6 @@ Final Technical Report and Result Interpretation
 ├── docs/
 │   └── Radio_Channel_Sounding_Multipath_Propagation_Analysis.pdf
 │
-├── figures/
-│   ├── figure_1_channel_sounding_architecture.png
-│   ├── figure_2_processing_pipeline.png
-│   ├── figure_7_validation_pdp_profiles.png
-│   ├── delay_coherence_angular_spread_corrected.png
-│   └── bartlett_music_validation.png
-│
 ├── src/
 │   ├── matlab/
 │   │   └── channel_analysis.m
@@ -113,6 +106,13 @@ Final Technical Report and Result Interpretation
 │   └── c/
 │       └── channel_analysis.c
 │
+├── figures/
+│   ├── figure_1_channel_sounding_architecture.png
+│   ├── figure_2_processing_pipeline.png
+│   ├── figure_7_validation_pdp_profiles.png
+│   ├── delay_coherence_angular_spread_corrected.png
+│   └── bartlett_music_validation.png
+│
 ├── results/
 │   └── validation_summary.md
 │
@@ -120,7 +120,6 @@ Final Technical Report and Result Interpretation
     ├── algorithm_complexity_summary.md
     └── result_traceability.md
 ```
----
 
 ## Key Results:
 
@@ -130,73 +129,82 @@ Final Technical Report and Result Interpretation
 | Diffraction-rich NLoS | 14.24 ns | 14.0 MHz | 0.29 rad | Moderate delay dispersion |
 | Reflection-rich NLoS | 23.38 ns | 8.6 MHz | 0.88 rad | Rich dispersive multipath channel |
 
-The results show the expected physical progression from a narrow, dominant-path channel to a richer dispersive multipath channel. As RMS delay spread increases, coherence bandwidth decreases, indicating stronger frequency selectivity.
-
----
+The results show the expected transition from a narrow dominant-path channel to a richer dispersive multipath channel. As RMS delay spread increases, coherence bandwidth decreases, indicating stronger frequency selectivity.
 
 # RF Link-Budget and Reference-Plane Analysis:
 
-A first-principles link-budget calculation was performed to estimate the received power at clearly defined RF reference planes. The transmit-side reference power is converted into effective isotropic radiated power as
+The received-power calculation keeps the RF reference plane explicit. This is important because antenna-input received power and receiver-chain amplified power are not the same physical quantity.
+
+The effective isotropic radiated power is calculated as
 
 ```math
 \mathrm{EIRP} = P_T + G_T - L_T - L_{\mathrm{att}}
 ```
 
-where \(P_T\) is the transmitter output power, \(G_T\) is the transmit-antenna gain, \(L_T\) is the transmit-chain loss, and \(L_{\mathrm{att}}\) is the calibrated attenuator loss.
-
-The antenna-input received power is calculated as
+The received power at the antenna-input reference plane is calculated as
 
 ```math
 P_{\mathrm{RX,in}} =
 \mathrm{EIRP} - L_f - L_d + G_R - L_R - L_{\mathrm{ASU}}
 ```
 
-where \(L_f\) is the free-space path loss, \(L_d\) is the diffraction loss, \(G_R\) is the receive-antenna gain, \(L_R\) is the receive-chain loss, and \(L_{\mathrm{ASU}}\) is the antenna-switching-unit insertion loss.
-
-The post-LNA received power is
+The received power at the post-LNA reference plane is calculated as
 
 ```math
 P_{\mathrm{RX,LNAout}} =
 P_{\mathrm{RX,in}} + G_{\mathrm{LNA}}
 ```
 
-For the LoS reference case:
+# For the LoS reference case:
 
 | Reference Plane | Received Power |
 |---|---:|
 | Antenna-input reference plane | approximately −54.04 dBm |
 | Post-LNA reference plane | approximately −29.04 dBm |
 
-This reference-plane separation prevents antenna-terminal received power from being confused with receiver-chain amplified power.
+The 25 dB difference corresponds to the LNA gain. Keeping these two values separate prevents antenna-terminal received power from being confused with receiver-chain amplified power.
 
----
+# ITU Knife-Edge Diffraction Modeling:
 
-# Channel Impulse Response and Power Delay Profile
+The diffraction-rich NLoS scenario includes an ITU single-knife-edge excess-loss model. The diffraction parameter is evaluated from the transmitter-obstacle, obstacle-receiver, wavelength, and obstruction geometry.
 
-The channel is represented using a discrete-time complex channel impulse response,
+The excess diffraction loss is included as an additional positive propagation loss:
 
 ```math
-h_m(\tau_k,t_l)
+P_{\mathrm{RX,in}} =
+\mathrm{EIRP} - L_f - L_d + G_R - L_R - L_{\mathrm{ASU}}
 ```
 
-where \(m\) is the receive branch index, \(\tau_k\) is the delay tap, and \(t_l\) is the snapshot index.
+where \(L_d = 0\) for the LoS reference case and positive for the diffraction-dominated NLoS case.
 
-The power delay profile is estimated by averaging the squared magnitude of the complex CIR over receive branches and snapshots:
+This separates free-space spreading loss from additional obstacle-induced diffraction loss.
+
+# Channel Impulse Response and PDP Processing:
+
+The channel impulse response is represented in delay as
+
+```math
+h(\tau) = \sum_{p=1}^{N_p} \alpha_p \delta(\tau - \tau_p)
+```
+
+where \(\alpha_p\) is the complex gain of the \(p\)-th path and \(\tau_p\) is its delay.
+
+The power delay profile is estimated from the complex CIR as
 
 ```math
 P(\tau_k) =
-\frac{1}{N_r L}
+\frac{1}{N_rL}
 \sum_m \sum_l
-\left|h_m(\tau_k,t_l)\right|^2
+|h_m(\tau_k,t_l)|^2
 ```
 
-A noise gate is applied below the PDP peak to remove weak delay taps dominated by the noise floor. The retained PDP taps are used for delay-statistics extraction.
+where \(N_r\) is the number of receive branches, \(L\) is the number of snapshots, and \(N_t\) is the number of delay taps.
 
----
+The PDP is then gated to remove noise-dominated delay taps before extracting delay statistics.
 
 # Delay-Statistics Estimation:
 
-The gated PDP is normalized into delay-domain weights:
+The gated PDP samples are normalized as
 
 ```math
 w_k =
@@ -204,14 +212,14 @@ w_k =
 {\sum_i P(\tau_i)}
 ```
 
-The mean excess delay is calculated as
+The mean excess delay is
 
 ```math
 \bar{\tau} =
 \sum_k w_k \tau_k
 ```
 
-The RMS delay spread is calculated as
+The RMS delay spread is
 
 ```math
 \sigma_\tau =
@@ -232,28 +240,23 @@ and
 B_c^{0.9} \approx \frac{1}{50\sigma_\tau}
 ```
 
-These parameters summarize the delay dispersion and frequency selectivity of the channel. A small RMS delay spread indicates a narrow dominant-path channel, while a larger RMS delay spread indicates stronger multipath dispersion and smaller coherence bandwidth.
+These parameters summarize the delay dispersion and frequency-selective behavior of the propagation channel.
 
----
+# Scenario-Based Multipath Analysis:
 
-# Diffraction-Loss Modeling:
+Three propagation profiles are analyzed:
 
-The diffraction-rich NLoS case includes ITU single-knife-edge diffraction loss. The diffraction parameter is used to estimate excess propagation loss caused by an obstruction between the transmitter and receiver.
+| Scenario | Propagation Character |
+|---|---|
+| LoS | Dominant direct ray with small delay spread |
+| Diffraction-rich NLoS | Delayed components caused by obstacle diffraction |
+| Reflection-rich NLoS | Richer multipath with larger delay and angular spread |
 
-The ITU-style knife-edge excess loss is modeled as an additional propagation loss \(L_d\), which is subtracted in the received-power equation:
-
-```math
-P_{\mathrm{RX,in}} =
-\mathrm{EIRP} - L_f - L_d + G_R - L_R - L_{\mathrm{ASU}}
-```
-
-For the LoS reference case, \(L_d = 0\). For the diffraction-rich NLoS case, \(L_d\) is positive and increases the total path loss.
-
----
+The LoS profile has the smallest RMS delay spread and largest coherence bandwidth. The reflection-rich profile has the largest RMS delay spread and smallest coherence bandwidth. This matches the expected physical behavior of multipath channels.
 
 # Angular-Domain Processing:
 
-The angular-domain validation uses simulated ULA snapshots. The array snapshot matrix is
+The angular-domain validation uses a uniform linear array model. The array snapshot matrix is
 
 ```math
 X \in \mathbb{C}^{N \times L}
@@ -264,19 +267,22 @@ where \(N\) is the number of ULA elements and \(L\) is the number of snapshots.
 The spatial covariance matrix is estimated as
 
 ```math
-R =
-\frac{1}{L}XX^H
+R = \frac{1}{L}XX^H
 ```
 
-where \((\cdot)^H\) denotes the Hermitian transpose.
+The covariance model can be written as
 
-The covariance matrix provides the basis for Bartlett beamforming and MUSIC subspace-based direction-of-arrival estimation.
+```math
+R = ASA^H + \sigma_n^2 I
+```
 
----
+where \(A\) contains the steering vectors, \(S\) is the source covariance matrix, and \(\sigma_n^2 I\) represents spatially white noise.
 
 # Bartlett Beamformer Validation:
 
-The Bartlett beamformer is a conventional power-scan estimator. For each candidate angle \(\theta\), the ULA steering vector \(a(\theta)\) is applied to the spatial covariance matrix \(R\). The Bartlett spectrum is
+The Bartlett beamformer is the conventional power-scan estimator. For each candidate angle \(\theta\), the ULA steering vector is applied to the covariance matrix.
+
+The Bartlett angular spectrum is
 
 ```math
 P_B(\theta) =
@@ -287,13 +293,11 @@ a^H(\theta)a(\theta)
 }
 ```
 
-Bartlett beamforming is robust and simple, but its angular resolution is limited by the array aperture. For a ULA with half-wavelength element spacing, closely spaced arrivals may merge into one broad lobe.
+Bartlett beamforming is robust and simple, but its angular resolution is limited by the array aperture. Therefore, closely spaced arrivals may merge into a single broad lobe.
 
----
+# MUSIC Algorithm Validation:
 
-# MUSIC Super-Resolution Validation:
-
-MUSIC is a subspace-based direction-of-arrival estimator. After eigendecomposition of the covariance matrix, the noise-subspace matrix \(E_n\) is formed from the eigenvectors associated with the smallest eigenvalues.
+MUSIC is a subspace-based direction-of-arrival estimator. After eigendecomposition of the spatial covariance matrix, the noise-subspace matrix \(E_n\) is formed from the eigenvectors associated with the smallest eigenvalues.
 
 The MUSIC pseudo-spectrum is
 
@@ -305,63 +309,147 @@ a^H(\theta)E_nE_n^Ha(\theta)
 }
 ```
 
-MUSIC forms sharp peaks when the candidate steering vector is nearly orthogonal to the noise subspace.
+In this project, MUSIC is used as an algorithm-validation module using simulated ULA snapshots. The resulting DoA peaks should not be interpreted as measured DoA results unless calibrated complex array measurements are added.
 
-In this project, MUSIC is used as an algorithm-validation module using simulated ULA snapshots. The resulting DoA peaks should not be interpreted as measured DoA results unless calibrated complex array measurements are added in future work.
+# Algorithm Complexity Summary:
 
----
+| Algorithm | Main Operation | Complexity |
+|---|---|---:|
+| Received-power reconstruction | PDP formation, gating, energy summation, reference-plane calculation | \(O(N_r L N_t)\) |
+| Delay-statistics estimator | PDP normalization, mean delay, RMS delay spread, coherence bandwidth | \(O(N_t)\) |
+| Spatial covariance estimation | \(R = \frac{1}{L}XX^H\) | \(O(N^2L)\) |
+| Bartlett beamformer | Angular scan over candidate steering vectors | \(O(|\Theta|N^2)\) |
+| MDL/AIC source-count estimation | Eigenvalue-based source-number selection after eigendecomposition | \(O(N)\) after EVD |
+| MUSIC estimator | Eigendecomposition and angular pseudo-spectrum scan | \(O(N^3 + |\Theta|N^2)\) |
 
-# Scenario Comparison:
+where:
 
-The three propagation profiles demonstrate how delay dispersion and coherence bandwidth change with multipath richness.
-
-| Scenario | Channel Behavior | Delay-Domain Effect | Frequency-Domain Effect |
-|---|---|---|---|
-| LoS | Dominant direct path | Small RMS delay spread | Large coherence bandwidth |
-| Diffraction-rich NLoS | Obstructed propagation with delayed components | Moderate RMS delay spread | Reduced coherence bandwidth |
-| Reflection-rich NLoS | Rich multipath with stronger delayed components | Largest RMS delay spread | Smallest coherence bandwidth |
-
-The trend
-
-```text
-RMS delay spread: 2.54 ns → 14.24 ns → 23.38 ns
-```
-
-and
-
-```text
-Coherence bandwidth: 78.7 MHz → 14.0 MHz → 8.6 MHz
-```
-
-confirms the expected inverse relationship between delay spread and coherence bandwidth.
-
----
-
-# Validation Methodology:
-
-The project uses simulation-based algorithm validation and deterministic numerical cross-checking.
-
-| Validation Area | Method | Outcome |
-|---|---|---|
-| Link budget | Hand calculation and code implementation | Reference-plane powers reproduced consistently |
-| PDP extraction | Controlled CIR scenario profiles | Delay taps and relative power levels extracted |
-| Delay statistics | PDP moment calculation | RMS delay spread and coherence bandwidth estimated |
-| Diffraction loss | ITU knife-edge model | Excess NLoS path loss included |
-| Bartlett beamforming | Simulated ULA snapshots | Conventional angular spectrum validated |
-| MUSIC | Simulated ULA snapshots and covariance eigendecomposition | Subspace pseudo-spectrum validated |
-| Cross-language check | MATLAB, Python, and C implementations | Core numerical blocks verified |
-
----
+| Symbol | Meaning |
+|---|---|
+| \(N_r\) | number of receive branches |
+| \(L\) | number of snapshots |
+| \(N_t\) | number of delay taps |
+| \(N\) | number of ULA elements |
+| \(|\Theta|\) | number of candidate scan angles |
 
 # MATLAB, Python, and C Implementation:
 
-The MATLAB implementation is the main report-aligned simulation and visualization pipeline. It performs link-budget calculation, scenario-profile generation, PDP analysis, delay-statistics extraction, figure generation, and optional Bartlett/MUSIC validation.
+The MATLAB implementation is the main report-aligned simulation and visualization pipeline. It computes the link budget, generates scenario-based CIR/PDP profiles, extracts delay statistics, estimates coherence bandwidth, and validates Bartlett/MUSIC angular-domain processing.
 
-The Python implementation provides reference numerical validation for selected processing blocks.
+The Python implementation provides deterministic numerical cross-checks of the main processing blocks.
 
-The C implementation provides a lightweight baseline for received-power and delay-statistics checks. This is useful for understanding how the low-complexity parts of the algorithm could be moved toward embedded or real-time receiver-oriented implementation
+The C implementation provides a lightweight reference for received-power reconstruction and delay-statistics estimation. This is useful for embedded or real-time receiver-oriented development where lower-complexity processing is preferred.
 
+# How to Run:
 
+## MATLAB
 
+```matlab
+cd src/matlab
+channel_analysis
+```
 
+## Python
 
+```bash
+cd src/python
+python channel_analysis.py
+```
+
+## C
+
+```bash
+cd src/c
+gcc channel_analysis.c -o channel_analysis -lm
+./channel_analysis
+```
+
+On Windows with MinGW:
+
+```bash
+gcc channel_analysis.c -o channel_analysis.exe -lm
+channel_analysis.exe
+```
+
+# Validation Summary:
+
+The validation establishes three main points.
+First, the link-budget implementation reproduces the expected received-power reference planes and keeps antenna-input and post-LNA powers separate.
+Second, the delay-statistics estimator produces a physically ordered progression across the three scenario profiles:
+```text
+2.54 ns → 14.24 ns → 23.38 ns
+```
+
+At the same time, the coherence bandwidth decreases:
+
+```text
+78.7 MHz → 14.0 MHz → 8.6 MHz
+```
+
+This confirms the expected relationship between multipath richness, RMS delay spread, and coherence bandwidth.
+
+Third, the angular-domain pipeline validates covariance formation, Bartlett beamforming, and MUSIC pseudo-spectrum processing using controlled simulated ULA snapshots.
+
+# Figures:
+
+Recommended figures included in this project:
+
+| Figure | Description |
+|---|---|
+| `figure_1_channel_sounding_architecture.png` | Channel-sounding architecture |
+| `figure_2_processing_pipeline.png` | Delay-, power-, and angular-domain processing pipeline |
+| `figure_7_validation_pdp_profiles.png` | Normalized PDP profiles for LoS, diffraction-rich, and reflection-rich scenarios |
+| `delay_coherence_angular_spread_corrected.png` | Scenario-wise RMS delay spread, coherence bandwidth, and angular spread |
+| `bartlett_music_validation.png` | Bartlett and MUSIC angular-spectrum validation |
+
+# Limitations and Future Work:
+
+The main limitation of this project is that the angular-domain validation uses simulated ULA snapshots rather than directly processed calibrated complex array measurements. Processing measured array snapshots with full per-element amplitude and phase calibration would convert the Bartlett/MUSIC section from algorithm validation into measured DoA extraction.
+
+A second limitation is that the project provides channel-sounding and multipath statistics for MIMO channel modeling, but it does not perform a full measured MIMO channel-matrix analysis with singular values, capacity, condition number, or measured spatial-correlation metrics.
+
+Future work should include:
+
+• calibrated measured complex ULA snapshots  
+• real measured CIR datasets  
+• uncertainty and repeatability analysis  
+• repeated measurement locations  
+• measured K-factor and Doppler extraction from time-varying channel envelopes  
+• elevation-angle characterization using planar or cylindrical arrays  
+• comparison against standardized channel models such as 3GPP TR 38.901  
+• spatial smoothing for correlated multipath arrivals before MUSIC processing  
+
+# Engineering Relevance:
+
+This project demonstrates the following RF/wireless engineering skills:
+
+• RF link-budget calculation  
+• EIRP and received-power reference-plane analysis  
+• Free-space path loss and diffraction-loss modeling  
+• Channel impulse response interpretation  
+• Power delay profile processing  
+• Mean excess delay and RMS delay-spread estimation  
+• Coherence-bandwidth analysis  
+• LoS and NLoS multipath interpretation  
+• Uniform linear array signal modeling  
+• Spatial covariance estimation  
+• Bartlett beamformer validation  
+• MUSIC algorithm validation  
+• MATLAB-based wireless-channel simulation  
+• Python reference implementation  
+• C-based lightweight numerical validation  
+• Algorithm complexity analysis  
+• 5G NR / 6G channel-modeling fundamentals  
+• OFDM frequency-selectivity interpretation  
+• MIMO and beamforming-oriented propagation analysis  
+
+# Project Status:
+
+Status: Completed  
+Tool: MATLAB, Python, C  
+Project Type: RF / Wireless Channel-Modeling Portfolio  
+Main Focus: Radio-channel sounding, multipath propagation, link-budget analysis, delay-domain statistics, and angular-domain algorithm validation  
+
+# Author
+
+Md Moklesur Rahman | RF / Wireless / System Specification Engineer | LinkedIn: linkedin.com/in/md-moklesur-rahman-65a63962
