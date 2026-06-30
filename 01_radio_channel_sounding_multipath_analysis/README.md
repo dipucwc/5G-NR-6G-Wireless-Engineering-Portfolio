@@ -328,11 +328,10 @@ where:
 
 # MATLAB, Python, and C Implementation:
 
-The MATLAB implementation is the main report-aligned simulation and visualization pipeline. It computes the link budget, generates scenario-based CIR/PDP profiles, extracts delay statistics, estimates coherence bandwidth, and validates Bartlett/MUSIC angular-domain processing.
-
-The Python implementation provides deterministic numerical cross-checks of the main processing blocks.
-
-The C implementation provides a lightweight reference for received-power reconstruction and delay-statistics estimation. This is useful for embedded or real-time receiver-oriented development where lower-complexity processing is preferred.
+This project provides MATLAB, Python, and C implementations to support simulation, numerical verification, and implementation-oriented analysis.
+MATLAB is used for the complete wireless-channel processing workflow, including link-budget calculation, scenario-based CIR/PDP generation, delay-statistics extraction, coherence-bandwidth estimation, and Bartlett/MUSIC angular-domain validation.
+Python provides an independent reference implementation for cross-checking the main numerical results, including received-power calculation, RMS delay spread, and coherence bandwidth.
+C provides a lightweight implementation of selected core algorithms, especially received-power reconstruction and delay-statistics estimation. This supports an implementation-oriented view of how the processing could be adapted for embedded or real-time receiver applications.
 
 # How to Run:
 
