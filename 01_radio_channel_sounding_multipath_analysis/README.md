@@ -2,7 +2,7 @@
 
 # Project Overview:
 
-This project presents a complete RF/wireless channel-modeling portfolio project focused on **radio-channel sounding, multipath propagation analysis, link-budget calculation, delay-domain statistics, and angular-domain algorithm validation** at **5.25 GHz**.
+This project presents a complete RF/wireless channel-modeling portfolio project focused on radio-channel sounding, multipath propagation analysis, link-budget calculation, delay-domain statistics, and angular-domain algorithm validation at **5.25 GHz**.
 
 The project connects first-principles RF propagation analysis with simulation-based channel-processing algorithms. The first part focuses on deterministic received-power calculation, including EIRP, free-space path loss, antenna gains, cable losses, attenuator loss, ASU insertion loss, LNA gain, and ITU single-knife-edge diffraction loss. The second part focuses on wireless-channel characterization, including channel impulse response modeling, power delay profile extraction, mean excess delay, RMS delay spread, coherence bandwidth, angular spread, spatial covariance, Bartlett beamforming, and MUSIC algorithm validation.
 
