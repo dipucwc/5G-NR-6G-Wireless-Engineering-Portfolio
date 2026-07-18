@@ -21,7 +21,7 @@ All projects in this repository are currently under development. Source code, re
 
 | No. | Project | Main Technical Focus | Status |
 |---:|---|---|---|
-| 01 | [Radio Channel Sounding and Multipath Analysis](./01_radio_channel_sounding_multipath_analysis/) | Channel impulse response, power-delay profile, path loss, delay spread, coherence bandwidth, and multipath characterization | Ongoing |
+| 01 | [Radio Channel Sounding and Multipath Analysis](./01_radio_channel_sounding_multipath_analysis/) | Channel impulse response, power-delay profile, path loss, delay spread, coherence bandwidth, and multipath characterization | Completed |
 | 02 | [5G NR/6G Downlink Physical-Layer Link Simulator](./02_5GNR_6G_Downlink_Physical-Layer_Link_Simulator/) | OFDM, MIMO, Massive MIMO, resource-grid processing, channel estimation, equalization, and link-level metrics | Ongoing |
 | 03 | [Beamforming and Direction-of-Arrival Estimation](./03_beamforming_and_doa_estimation/) | Antenna arrays, spatial covariance, conventional and adaptive beamforming, MUSIC, Capon, and DoA estimation | Ongoing |
 
